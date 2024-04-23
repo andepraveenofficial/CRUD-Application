@@ -1,0 +1,28 @@
+### API 0 : Home
+GET  http://localhost:6000/
+
+  
+### API 1 : Add Single Cusomer
+POST http://localhost:6000/customers
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "age": 30,
+    "address": {
+        "city": "New York",
+        "country": "US"
+    }
+}
+  
+
+### API 2 : Get All Customers
+GET  http://localhost:6000/customers
+
+### API 3 : Get Single Customer
+PUT  http://localhost:6000/customers/2
+ Content-Type: application/json
+
+{
+    "name": "Ande Praveen"
+}
