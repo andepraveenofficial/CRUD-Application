@@ -21,8 +21,9 @@ GET  http://localhost:6000/customers
 
 ### API 3 : Get Single Customer
 PUT  http://localhost:6000/customers/2
- Content-Type: application/json
+Content-Type: application/json
 
 {
     "name": "Ande Praveen"
 }
+

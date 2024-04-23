@@ -126,8 +126,9 @@ app.put("/customers/:id", async (request, response) => {
   const date = new Date()
 
   const updateSingleCustomerQuery = `UPDATE customers
-  SET name = ${name}, updated_on = ${date}
-  WHERE id = ${id};`;
+  SET name = '${name}',
+updated_on = '${date}'
+  WHERE id = ${id}`;
 
   try {
       await db.run(updateSingleCustomerQuery);
