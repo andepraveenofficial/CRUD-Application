@@ -137,3 +137,18 @@ updated_on = '${date}'
       console.error("Error Updated Single Customer Data:", error.message);
   }
 });
+
+// API 5 : Delete Single Customer Data 
+app.delete("/customers/:id", async (request, response) => {
+  console.log("Delete Single Customer Data");
+  const {id} = request.params;
+
+  const deleteSingleCustomerQuery = `DELETE FROM customers WHERE id = ${id}`;
+
+  try {
+      await db.run(deleteSingleCustomerQuery);
+      response.send("Deleted Single Customer Data", id);
+  } catch (error) {
+      console.error("Error Deleted Single Customer Data:", error.message);
+  }
+});

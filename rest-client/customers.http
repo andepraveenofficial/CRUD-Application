@@ -27,3 +27,6 @@ Content-Type: application/json
     "name": "Ande Praveen"
 }
 
+
+### API 4 : Delete Single Customer
+DELETE  http://localhost:6000/customers/2
